@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description>jjssoftware.github.io blog</description>
+    <link>https://jjssoftware.github.io/</link>
+    <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 11 Jun 2016 22:40:09 +0100</pubDate>
+    <lastBuildDate>Sat, 11 Jun 2016 22:40:09 +0100</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>hello jjssoftware.github.io</title>
+        <description>&lt;p&gt;Hi! This is post #1. Not much to say at the moment but I’d like to give a thumbs up and thanks to &lt;a href=&quot;https://willianjusten.com.br/&quot;&gt;Wiilian Justen&lt;/a&gt; for providing the great &lt;a href=&quot;https://github.com/willianjusten/will-jekyll-template&quot;&gt;jekyll template&lt;/a&gt; that I’m going to be using for creating and maintaining this site.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 11 Jun 2016 16:24:56 +0100</pubDate>
+        <link>https://jjssoftware.github.io/hello.jjssoftware.github.io/</link>
+        <guid isPermaLink="true">https://jjssoftware.github.io/hello.jjssoftware.github.io/</guid>
+        
+        <category>blog</category>
+        
+        <category>post</category>
+        
+        <category>jekyll</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>
