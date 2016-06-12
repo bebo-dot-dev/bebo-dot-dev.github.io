@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "iD8266 (aka SkyNet)",
+      "category" : "videos",
+      "tags"     : "iD8266, esp8266, and youtube",
+      "url"      : "/id8266-aka-skynet/",
+      "date"     : "12 Jun 2016"
+    } ,
+  
+    {
       "title"    : "hello jjssoftware.github.io",
       "category" : "blog",
       "tags"     : "blog, post, and jekyll",

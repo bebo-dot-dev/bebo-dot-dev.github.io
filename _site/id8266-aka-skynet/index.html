@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>hello jjssoftware.github.io</title>
-    <meta name="description" content="#hello world">
+    <title>iD8266 (aka SkyNet)</title>
+    <meta name="description" content="esp8266 web based firmware">
 
     <!-- Google Authorship Markup -->
     <link rel="author" href="https://plus.google.com/108205719135497472486?rel=author">
@@ -14,24 +14,24 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@id8266_1">
-    <meta name="twitter:title" content="hello jjssoftware.github.io">
-    <meta name="twitter:description" content="#hello world">
+    <meta name="twitter:title" content="iD8266 (aka SkyNet)">
+    <meta name="twitter:description" content="esp8266 web based firmware">
     
     <meta property="twitter:image:src" content="https://jjssoftware.github.io/assets/img/">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://jjssoftware.github.io/hello.jjssoftware.github.io/">
-    <meta property="og:title" content="hello jjssoftware.github.io">
+    <meta property="og:url" content="https://jjssoftware.github.io/id8266-aka-skynet/">
+    <meta property="og:title" content="iD8266 (aka SkyNet)">
     
     <meta property="og:image" content="https://jjssoftware.github.io/assets/img/">
     
-    <meta property="og:description" content="#hello world">
+    <meta property="og:description" content="esp8266 web based firmware">
     <meta property="og:site_name" content="">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="hello jjssoftware.github.io"/>
-    <meta itemprop="description" content="#hello world">
+    <meta itemprop="name" content="iD8266 (aka SkyNet)"/>
+    <meta itemprop="description" content="esp8266 web based firmware">
     <meta itemprop="image" content="https://jjssoftware.github.io/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://jjssoftware.github.io/hello.jjssoftware.github.io/">
+    <link rel="canonical" href="https://jjssoftware.github.io/id8266-aka-skynet/">
     <link rel="alternate" type="application/rss+xml" title="" href="https://jjssoftware.github.io/feed.xml" />
 </head>
 
@@ -67,10 +67,10 @@
         <header class="header-post" role="banner">
     <div class="content">
         
-            <time itemprop="datePublished" datetime="2016-06-11 16:24:56 +0100" class="date">11 Jun 2016</time>
+            <time itemprop="datePublished" datetime="2016-06-12 08:42:54 +0100" class="date">12 Jun 2016</time>
         
-        <h1 class="post-title" itemprop="name">hello jjssoftware.github.io</h1>
-        <p itemprop="description" class="subtitle">#hello world</p>
+        <h1 class="post-title" itemprop="name">iD8266 (aka SkyNet)</h1>
+        <p itemprop="description" class="subtitle">esp8266 web based firmware</p>
     </div>
      <a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
      <div class="search-wrapper">
@@ -120,21 +120,58 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <p>Hi! This is post #1. Not much to say at the moment but I’d like to give a thumbs up and thanks to <a href="https://willianjusten.com.br/">Willian Justen</a> for providing the great <a href="https://github.com/willianjusten/will-jekyll-template">jekyll template</a> that I’m going to be using for creating and maintaining this site.</p>
+                <h2 id="esp8266-web-based-firmware">esp8266 web based firmware</h2>
+
+<p>I’ve been working on a project to create custom web based firmware for the esp8266 for about the last six months. If you landed here and you don’t know what an <a href="http://www.esp8266.com/" target="_blank">esp8266</a> is, it’s a tiny WiFi enabled microprocessor board in various models with varying features depending on which model you go for. There’s a large community around these devices with hobbyists / DIY electronics people and if you’re an avr / arduino tinkerer you’ll feel right at home playing around with esp8266 boards.</p>
+
+<p>By and large these devices are made by a single manufacter <a href="https://espressif.com/" target="_blank">Expressif Systems</a> in China and out of the box these devices come with pre-built ‘AT’ firmware preinstalled. This firmware is called AT firmware because the device emulates an AT command set over it’s serial interface for communication / configuration purposes similar to the AT command set implemented in dial up modems of old. Some people develop applications with these devices with the preinstalled AT firmware in place along with some other device (e.g. an arduino board) to interface with the esp8266 over it’s serial AT interface. It is however entirely possible and reasonably easy to develop code to run directly on the esp8266 itself removing the need for some other device to act as the ‘intelligence’ in the setup. Enter esp8266 web based firmware..</p>
+
+<h2 id="formulating-a-plan">Formulating a plan</h2>
+
+<p>Sometime ago back in December 2015 I was reading about these devices and thought ‘hmm sounds interesting’ so I dropped an order on Aliexpress for a single esp826612E board - it cost something like $2. It was looking like a fairly long estimated lead time for the device to actually arrive (about a month) so that gave me some time to think about what sort of project I could work on with it when it arrived. I didn’t have a specific application for this thing unlike other users that might need to monitor a door opening / closing, monitor their fish tank water filtering system, monitor / control greenhouse humidity etc so I tried to come up with an idea for something that might be generally useful with no specific hard wired application in mind - some sort of esp8266 electronics based / firmware abstration of an application if you will. I also thought of an idea where it would be nice if this application were accessible and easily usable without people having to get their soldering iron out to connect it up and use it. So the idea of custom web based firmware that would run on the device started to form along with a plan to eventually house the device in an enclosure to make it more ‘user friendly’.</p>
+
+<p>That brings us up to date where I am today with development on this. About six months in, I admit it has been fairly slow going on this project but in my defence I only work on this in my own time and I do have a day job. So I’m fairly happy where this is up to, I’d say the firmware aspect of this is now at v1.0 and I’m moving into hardware design territory next with a bunch of new components in transit winging their way from the far east right now.</p>
+
+<p>So what on earth is iD8266 and SkyNet? iD8266 is a sort of codename combined with a logo that is connected to half a plan to turn this project into a real product at some point. SkyNet is a joke that a mate came up with when I told him about this project - my esp8266 became LED aware on 23 March 2016 at 21:05 and it now rules the LEDs.</p>
+
+<h2 id="videos--features">Videos / Features</h2>
+
+<p>Along the way I’ve recorded some progress videos to track development and implementation of the firmware and these are up on youtube highlighting various features including:</p>
+
+<ul>
+  <li>bootstrap responsive design</li>
+  <li>user authentication / session support</li>
+  <li>flash persistence for all configuration</li>
+  <li>network configuration support</li>
+  <li>DNS support</li>
+  <li>web server configuration support</li>
+  <li>GPIO configuration and control</li>
+  <li>GPIO MQTT support for open lightweight monitoring and control</li>
+  <li>websockets support</li>
+  <li>JSON Rest style API for 3rd party application development</li>
+  <li>NTP client configuration support</li>
+  <li>Support for logging to external services e.g. Thingspeak and any other HTTP server that accepts a GET request</li>
+  <li>diagnostics display</li>
+  <li>OTA firmware update</li>
+</ul>
+
+<p>Take a look at the youtube videos here: <a href="https://www.youtube.com/channel/UCa_exk34O_W2tTnGeHXw5Og" target="_blank">https://www.youtube.com/channel/UCa_exk34O_W2tTnGeHXw5Og</a></p>
+
+<p>Youtube comments are welcome.</p>
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;jjssoftware.github.io blog first post&quot;%20https://jjssoftware.github.io/hello.jjssoftware.github.io/%20via%20&#64;id8266_1&hashtags=blog,post,jekyll,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;esp8266 web based firmware videos on youtube&quot;%20https://jjssoftware.github.io/id8266-aka-skynet/%20via%20&#64;id8266_1&hashtags=iD8266,esp8266,youtube,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://jjssoftware.github.io/hello.jjssoftware.github.io/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://jjssoftware.github.io/id8266-aka-skynet/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://jjssoftware.github.io/hello.jjssoftware.github.io/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://jjssoftware.github.io/id8266-aka-skynet/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -163,7 +200,7 @@
         disqus_loaded = true;
         var disqus_shortname = 'jjsuk';
         var disqus_title = '';
-        var disqus_url = '/hello.jjssoftware.github.io/';
+        var disqus_url = '/id8266-aka-skynet/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
