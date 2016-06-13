@@ -5,9 +5,31 @@
     <description>jjssoftware.github.io blog</description>
     <link>https://jjssoftware.github.io/</link>
     <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Jun 2016 19:12:50 +0100</pubDate>
-    <lastBuildDate>Sun, 12 Jun 2016 19:12:50 +0100</lastBuildDate>
+    <pubDate>Mon, 13 Jun 2016 22:00:43 +0100</pubDate>
+    <lastBuildDate>Mon, 13 Jun 2016 22:00:43 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>esp8266 Dynamic Web Forms</title>
+        <description>&lt;h2 id=&quot;the-problem&quot;&gt;The problem&lt;/h2&gt; &lt;p&gt;In my &lt;a href=&quot;/id8266-aka-skynet/&quot;&gt;last post&lt;/a&gt; where I talked about my ep8266 web based firmware project, it became apparent fairly early in the process of putting things together than I needed some way to render dynamic data in the web pages I was building e.g. current device network configuration settings, device web server settings etc. In the ‘heavyweight’ web based systems and platforms that I’ve worked with in my day job there has always been some sort of framework to help out in this area. If I was working / developing in ASP.NET web forms, MVC, PHP, Express...</description>
+        <pubDate>Mon, 13 Jun 2016 20:40:46 +0100</pubDate>
+        <link>https://jjssoftware.github.io/dynamic-web-forms/</link>
+        <guid isPermaLink="true">https://jjssoftware.github.io/dynamic-web-forms/</guid>
+        
+        <category>esp8266</category>
+        
+        <category>HTML</category>
+        
+        <category>AJAX</category>
+        
+        <category>JavaScript</category>
+        
+        
+        <category>web</category>
+        
+        <category>internet</category>
+        
+      </item>
     
       <item>
         <title>iD8266 (aka SkyNet)</title>

@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "esp8266 Dynamic Web Forms",
+      "category" : "webinternet",
+      "tags"     : "esp8266, HTML, AJAX, and JavaScript",
+      "url"      : "/dynamic-web-forms/",
+      "date"     : "13 Jun 2016"
+    } ,
+  
+    {
       "title"    : "iD8266 (aka SkyNet)",
       "category" : "videos",
       "tags"     : "iD8266, esp8266, and youtube",
