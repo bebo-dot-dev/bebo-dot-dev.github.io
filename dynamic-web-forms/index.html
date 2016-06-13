@@ -142,7 +142,7 @@
 <ol>
   <li>A user makes a request for a page (HTTP GET request)</li>
   <li>The server renders the static part of the page as the response. In my project I deliver all static content from the SPIFFS</li>
-  <li>As part of the static page content, JavaScript is included which is setup to auto-execute on page load done in the client browsers</li>
+  <li>As part of the static page content, JavaScript is included which is setup to auto-execute on page load done in the client browser</li>
   <li>When the page loads, the JavaScript that was delivered as part of the static makes an AJAX call to the server to get the rest of the dynamic content for the page. The server receives this request and returns a JSON response</li>
   <li>The JSON response is processed by JS code and the page DOM is dynamically updated with the data in the JSON object. Call this DHTML / dynamic injection or whatever you like - this is the part that updates the page with the dynamic content.</li>
 </ol>
@@ -168,7 +168,7 @@
   <li>Modular JavaScript and C/C++ handling code == readable maintainable blocks of code (if done right)</li>
 </ul>
 
-<p>Perhaps what I eventually settled on can be considered the ‘poor man’s way’ for implementing dynamic web forms on the esp8266. I suspect that someone with better C/C++ skills than me and the appetite to implement an efficient server side templating framework might say that. If you’re doing this sort of thing too, I’d appreciate it if you’d outline your approach to solving this problem in the comments.</p>
+<p>Perhaps what I eventually settled on can be considered the ‘poor man’s way’ for implementing dynamic web forms on the esp8266. I suspect that someone with better C/C++ skills than me and the appetite to implement an efficient server side templating framework would say that. If you’re doing this sort of thing too, I’d appreciate it if you could outline your approach to solving this problem in the comments.</p>
 
             </article>
 
