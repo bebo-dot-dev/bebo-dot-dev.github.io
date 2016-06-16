@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "esp8266 String Optimization",
+      "category" : "firmware",
+      "tags"     : "esp8266, C/C++, and arduino",
+      "url"      : "/string-optimization/",
+      "date"     : "15 Jun 2016"
+    } ,
+  
+    {
       "title"    : "esp8266 Dynamic Web Forms",
       "category" : "webinternet",
       "tags"     : "esp8266, HTML, AJAX, and JavaScript",
