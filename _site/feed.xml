@@ -5,9 +5,35 @@
     <description>jjssoftware.github.io blog</description>
     <link>https://jjssoftware.github.io/</link>
     <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 Jun 2016 23:50:41 +0100</pubDate>
-    <lastBuildDate>Thu, 16 Jun 2016 23:50:41 +0100</lastBuildDate>
+    <pubDate>Sat, 18 Jun 2016 17:46:39 +0100</pubDate>
+    <lastBuildDate>Sat, 18 Jun 2016 17:46:39 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Securing your esp8266</title>
+        <description>&lt;h2 id=&quot;the-internet-and-esp8266&quot;&gt;The internet and esp8266&lt;/h2&gt; &lt;p&gt;This is an article about using TLS/SSL to secure an esp8266 device so it can be safely accessed over the internet. This is important for me because the firmware running on my device is &lt;a href=&quot;/id8266-aka-skynet/&quot;&gt;http web based firmware&lt;/a&gt; and I’d like to be able to access my device from anywhere. If you use your esp8266 device to switch your lights on/off, open/close the curtains, control the heating in your home, something else you don’t want some random person in Timbuktoo having control of then you 100% will want to be securing access to your...</description>
+        <pubDate>Sat, 18 Jun 2016 13:19:30 +0100</pubDate>
+        <link>https://jjssoftware.github.io/secure-your-esp8266/</link>
+        <guid isPermaLink="true">https://jjssoftware.github.io/secure-your-esp8266/</guid>
+        
+        <category>esp8266</category>
+        
+        <category>arduino</category>
+        
+        <category>tls</category>
+        
+        <category>ssl</category>
+        
+        <category>internet</category>
+        
+        <category>web</category>
+        
+        
+        <category>web</category>
+        
+        <category>internet</category>
+        
+      </item>
     
       <item>
         <title>esp8266 String Optimization</title>

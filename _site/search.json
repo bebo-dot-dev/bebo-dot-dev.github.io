@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Securing your esp8266",
+      "category" : "webinternet",
+      "tags"     : "esp8266, arduino, tls, ssl, internet, and web",
+      "url"      : "/secure-your-esp8266/",
+      "date"     : "18 Jun 2016"
+    } ,
+  
+    {
       "title"    : "esp8266 String Optimization",
       "category" : "firmware",
       "tags"     : "esp8266, C/C++, and arduino",

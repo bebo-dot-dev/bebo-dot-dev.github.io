@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>esp8266 String Optimization</title>
-    <meta name="description" content="Get that pre-processor working!">
+    <title>Securing your esp8266</title>
+    <meta name="description" content="it's a scary internet out there">
 
     <!-- Google Authorship Markup -->
     <link rel="author" href="https://plus.google.com/108205719135497472486?rel=author">
@@ -14,24 +14,24 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@id8266_1">
-    <meta name="twitter:title" content="esp8266 String Optimization">
-    <meta name="twitter:description" content="Get that pre-processor working!">
+    <meta name="twitter:title" content="Securing your esp8266">
+    <meta name="twitter:description" content="it's a scary internet out there">
     
-    <meta property="twitter:image:src" content="https://jjssoftware.github.io/assets/img/preprocessor.jpg">
+    <meta property="twitter:image:src" content="https://jjssoftware.github.io/assets/img/tls.png">
     
 
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="https://jjssoftware.github.io/string-optimization/">
-    <meta property="og:title" content="esp8266 String Optimization">
+    <meta property="og:url" content="https://jjssoftware.github.io/secure-your-esp8266/">
+    <meta property="og:title" content="Securing your esp8266">
     
-    <meta property="og:image" content="https://jjssoftware.github.io/assets/img/preprocessor.jpg">
+    <meta property="og:image" content="https://jjssoftware.github.io/assets/img/tls.png">
     
-    <meta property="og:description" content="Get that pre-processor working!">
+    <meta property="og:description" content="it's a scary internet out there">
     <meta property="og:site_name" content="">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="esp8266 String Optimization"/>
-    <meta itemprop="description" content="Get that pre-processor working!">
+    <meta itemprop="name" content="Securing your esp8266"/>
+    <meta itemprop="description" content="it's a scary internet out there">
     <meta itemprop="image" content="https://jjssoftware.github.io/assets/img/blog-image.png"/>
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://jjssoftware.github.io/string-optimization/">
+    <link rel="canonical" href="https://jjssoftware.github.io/secure-your-esp8266/">
     <link rel="alternate" type="application/rss+xml" title="" href="https://jjssoftware.github.io/feed.xml" />
 </head>
 
@@ -67,10 +67,10 @@
         <header class="header-post" role="banner">
     <div class="content">
         
-            <time itemprop="datePublished" datetime="2016-06-15 22:20:02 +0100" class="date">15 Jun 2016</time>
+            <time itemprop="datePublished" datetime="2016-06-18 13:19:30 +0100" class="date">18 Jun 2016</time>
         
-        <h1 class="post-title" itemprop="name">esp8266 String Optimization</h1>
-        <p itemprop="description" class="subtitle">Get that pre-processor working!</p>
+        <h1 class="post-title" itemprop="name">Securing your esp8266</h1>
+        <p itemprop="description" class="subtitle">it's a scary internet out there</p>
     </div>
      <a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
      <div class="search-wrapper">
@@ -120,58 +120,157 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <h2 id="big-software--little-software">Big software / little software</h2>
-<p>Traditional software systems and platforms (think Twitter, your operating system, the web browser you’re using right now to read this article etc) run on servers and personal computers that have gigabytes of RAM available for developers to use. Mobile phones have reached the point where they also have gigabytes of RAM onboard. Add to this operating system features like virtual memory management and it’s easy to see why developers that are creating software targetting these platforms might tend to treat system resources as limitless to use as they see fit. There are exceptions to this generalization but at the risk of sounding like a ‘get off my lawn’ old git, the hardware that’s available in large systems today can induce a certain level of lazyness in developers  - and I include myself here too. Need a string? Declare it and use it without giving it a second thought and move on. It does go further than this too, but this article is about strings so I’ll leave it there.</p>
+                <h2 id="the-internet-and-esp8266">The internet and esp8266</h2>
 
-<p>Developing embedded software that targets a microcontroller forces a developer to think about things differently however: Operating system - no, your microcontroller code runs directly on the metal. Exception handling? None. Virtual memory management? Doesn’t exist. Lots of RAM? Forget it, you’re working in an environment with kilobytes of SRAM (~40kB usable on an esp8266) and perhaps a few megabytes of flash memory for non-volatile storage if you’re lucky. This means that every line of code you write to run on your microcontroller is ideally developed to be as efficient as it can be.</p>
+<p>This is an article about using TLS/SSL to secure an esp8266 device so it can be safely accessed over the internet. This is important for me because the firmware running on my device is <a href="/id8266-aka-skynet/">http web based firmware</a> and I’d like to be able to access my device from anywhere. If you use your esp8266 device to switch your lights on/off, open/close the curtains, control the heating in your home, something else you don’t want some random person in Timbuktoo having control of then you 100% will want to be securing access to your device(s) if you’re thinking about opening up access over the internet.</p>
 
-<h2 id="when-strings-go-bad">When strings go bad</h2>
-<p>I think the problem might start with the many small pieces of sample code available all over the internet for esp8266 boards and arduino type boards that show strings embedded directly within C/C++ and arduino sketch code. The code samples included in the esp8266 arduino core also don’t help here; if you take a look at the <a href="https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WebServer/examples" target="_blank">arduino core code samples</a> for the ESP8266WebServer class, you don’t have to go far to see many examples of string literals embedded directly within C/C++ .ino sketch file code. I understand that these examples exist to prove a point on some specific piece of functionality but at the same time this is the open source equivalent of ‘not production quality code’ without any actual warning being mentioned.</p>
+<p>At the time of writing there is no native on board support for TLS/SSL certificates and given the hardware capabilities of current boards, I’d say this is just how it is and it’s unlikely to change. This means that if we want TLS protection for our esp device(s) we need to use some other external device as an up front security layer. In real terms this means the implementation of a TLS/SSL reverse proxy where the proxy device sits on the network and it has the ability to encrypt traffic and also act as a traffic relay for devices sat behind it that cannot do the job of TLS/SSL themselves.</p>
 
-<p>For very small projects, embedding strings directly into microcontroller code might not pose a problem at all however as a project grows over time from small to medium and onto large, I’d say that many directly embedded string literals can start to become an issue in two main ways:</p>
+<p>Note that although this post is about securing esp8266 devices, the techniques discussed can be equally applied to arduino devices with WiFi shields or indeed any computer or other device that needs securing via a TSL/SSL reverse proxy.</p>
+
+<p><img src="/assets/img/reverse-proxy.png" alt="Reverse proxy" title="Reverse proxy" /></p>
+
+<h2 id="enter-nginx">Enter nginx</h2>
+
+<p>Without further ado I’ll introduce nginx as the server software that I use to act as a reverse proxy server. Nginx is a lightweight highly configurable web server that does a great job as a TSL/SSL reverse proxy see. In this article I’ll demonstrate a working nginx configuration file to enable TLS/SSL protection and in addition the proxy will also act as a HTTP caching server which means it can potentially massively improve performance of access to web pages. In the case of an esp8266 device behind the SSL reverse caching proxy, this means static content is served by nginx rather than off the esp8266 device itself.</p>
+
+<p>Obviously to use nginx, you need nginx installed or you need to install nginx. Personally I run nginx on my NAS device because that’s a device I have on the LAN that’s always on. My NAS device also runs a flavour of linux so nginx is well supported on this platform although I did need to use entware to get nginx cleanly installed because my NAS device doesn’t run a mainstream linux distro with a regular package management system.</p>
+
+<p>So step 1 is to decide where you’re going to run nginx, be it a NAS device, a raspberry PI you’ve got lying around or a spare computer. If you need to get nginx installed the best place to start is probably here: <a href="https://www.nginx.com/resources/admin-guide/installing-nginx-plus/">https://www.nginx.com/resources/admin-guide/installing-nginx-plus/</a></p>
+
+<hr />
+
+<h2 id="the-nginx-configuration">The nginx configuration</h2>
+
+<p>Here’s a working nginx configuration file which has been tested and proven to work on nginx v1.10.0. It’s also actually very close to the vanilla configuration I use myself:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// ESP8266 nginx SSL reverse proxy configuration file (tested and working on nginx v1.10.0)
+
+// proxy cache location
+proxy_cache_path /opt/etc/nginx/cache levels=1:2 keys_zone=ESP8266_cache:10m max_size=10g inactive=5m use_temp_path=off;
+
+// webserver proxy
+server {
+
+    // general server parameters
+    listen                      50080;
+    server_name                 myDomain.net;
+    access_log                  /opt/var/log/nginx/myDomain.net.access.log;       
+
+    // SSL configuration
+    ssl                         on;
+    ssl_certificate             /usr/builtin/etc/certificate/lets-encrypt/myDomain.net/fullchain.pem;
+    ssl_certificate_key         /usr/builtin/etc/certificate/lets-encrypt/myDomain.net/privkey.pem;
+    ssl_session_cache           builtin:1000  shared:SSL:10m;
+    ssl_protocols               TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers                 HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
+    ssl_prefer_server_ciphers   on;
+    
+    location / {
+
+      // proxy caching configuration
+      proxy_cache             ESP8266_cache;
+      proxy_cache_revalidate  on;
+      proxy_cache_min_uses    1;
+      proxy_cache_use_stale   off;
+      proxy_cache_lock        on;
+      // proxy_cache_bypass      $http_cache_control;      
+      // include the sessionId cookie value as part of the cache key - keeps the cache per user
+      // proxy_cache_key         $proxy_host$request_uri$cookie_sessionId;
+
+      // header pass through configuration
+      proxy_set_header        Host $host;      
+      proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header        X-Forwarded-Proto $scheme;      
+
+      // ESP8266 custom headers which identify to the device that it's running through an SSL proxy     
+      proxy_set_header        X-SSL On;
+      proxy_set_header        X-SSL-WebserverPort 50080;
+      proxy_set_header        X-SSL-WebsocketPort 50081;
+
+      // extra debug headers      
+      add_header              X-Proxy-Cache $upstream_cache_status;
+      add_header              X-Forwarded-For $proxy_add_x_forwarded_for;
+
+      // actual proxying configuration
+      proxy_ssl_session_reuse on;
+      // target the IP address of the device with proxy_pass
+      proxy_pass              http://192.168.0.20;
+      proxy_read_timeout      90;
+    }
+ }
+
+// websocket proxy
+server {
+
+    // general server parameters
+    listen                      50081;
+    server_name                 myDomain.net;
+    access_log                  /opt/var/log/nginx/myDomain.net.wss.access.log;
+
+    // SSL configuration
+    ssl                         on;
+    ssl_certificate             /usr/builtin/etc/certificate/lets-encrypt/myDomain.net/fullchain.pem;
+    ssl_certificate_key         /usr/builtin/etc/certificate/lets-encrypt/myDomain.net/privkey.pem;
+    ssl_session_cache           builtin:1000  shared:SSL:10m;
+    ssl_protocols               TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers                 HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
+    ssl_prefer_server_ciphers   on;
+    
+    location / {     
+
+      // websocket upgrade tunnel configuration
+      proxy_pass                    http://192.168.0.20:81;
+      proxy_http_version            1.1;
+      proxy_set_header Upgrade      $http_upgrade;
+      proxy_set_header Connection   "Upgrade";
+      proxy_read_timeout            86400;
+    }
+ }
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="the-config-explained">The config explained</h2>
+
+<p>I won’t go into an exhaustive discussion about everthing in this configuration but I will point out the interesting parts with reference to the official docs:</p>
 
 <ol>
-  <li>Strings become sprawling and scattered through project code and as a result are difficult to find and maintain.</li>
-  <li>String literals directly embedded in code are mapped directly into heap memory on a device and eventual heap memory depletion == unexpected application crash and device reboot.</li>
+  <li>Note that you can have multiple configuration files on nginx. Each file with a <strong>server</strong> section represents a separate hosted web service. Just make sure you separate correctly and get your ports right.</li>
+  <li>The <strong>proxy_cache_path</strong> directive describes the caching configuration for this server. Read more about this <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html?&amp;_ga=1.185147755.316971408.1464531053#proxy_cache_path">here</a></li>
+  <li>The <strong>listen</strong> directive tells the server what port to listen on. Read more about this <a href="http://nginx.org/en/docs/http/ngx_http_core_module.html?&amp;_ga=1.42541799.316971408.1464531053#listen">here</a></li>
+  <li>The <strong>server_name</strong> should match the domain name of the domain that this <strong>server</strong> is intended to service. Read more about this <a href="http://nginx.org/en/docs/http/ngx_http_core_module.html?&amp;_ga=1.42541799.316971408.1464531053#server_name">here</a></li>
+  <li>The <strong>ssl</strong> directives are used to configure nginx to make it aware of the TLS/SSL cert in use and it’s configuration. The certificate shown in use in the configuration above is a LetsEncrypt certificate. You can read more about LetsEncrypt <a href="https://letsencrypt.org/about/">here</a> and you can read about the nginx <strong>ssl</strong> directives <a href="http://nginx.org/en/docs/http/configuring_https_servers.html">here</a></li>
+  <li>The <strong>location /</strong> section within the <strong>server</strong> section bascially means “use the follow configuration within this location section for all requests made to this server”</li>
+  <li>The <strong>proxy_set_header</strong> directive is used to pass HTTP request headers through to the device(s) behind the proxy. The device or server behind the proxy will receive these headers and can use them for whatever purpose necessary. Read more about this <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html?&amp;_ga=1.108154304.316971408.1464531053#proxy_set_header">here</a></li>
+  <li>The <strong>proxy_pass</strong> directive identifies the backend device and port for the device being proxied. This means that traffic coming in for the <strong>server_name</strong> on the <strong>listen</strong> port will be proxied to the <strong>proxy_pass</strong> backend device / server. Read more about this <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html?&amp;_ga=1.108154304.316971408.1464531053#proxy_pass">here</a></li>
 </ol>
 
-<h2 id="where-did-it-all-go-wrong">Where did it all go wrong?</h2>
-<p>Like all other web applications that I’ve ever worked on, my esp8266 <a href="/id8266-aka-skynet/">web based firmware</a> project code performs lots of string comparison and string manipulation operations at runtime. Consider working scenarios where http headers are scanned and examined in requests, routes to pages are defined, mime types are defined, http headers are returned, form post and query string variables are received, validated and transformed..etc the list goes on.</p>
+<h2 id="to-conclude">To conclude</h2>
 
-<p>For me it started to go wrong pretty much from the start; I started out with the goal of building an esp8266 web based application based on the <a href="https://github.com/esp8266/arduino">Arduino Core</a> and it’s libraries with little working knowledge or background in arduino devices in general. From this starting position coupled with the volume of example code pieces that  demonstrated various features available coming with no health warning, it was easy to go wrong early.</p>
-
-<p>It wasn’t apocalyptic and I didn’t see a catastrophic failure but as my project code was growing over time, I did notice that heap memory was slowly starting to deplete as I was adding more functionality. When I started out with early investigations using the esp8266 arduino core, I saw that free available heap was approximately 34kB. Around April 2016, 4 months into project development, my heap memory had depleted down to approx 19kB at runtime. Something was wrong and it was time to investigate.</p>
-
-<p>After a short while reading around, I learnt how bad it can be to embed many strings directly in microcontroller code as these strings are mapped directly into heap RAM. If the same exact string is declared multiple times, every copy of that string uses another small chunk of heap memory. I was happy I’d found a candidate problem to go after to improve the situation with heap memory usage.</p>
-
-<h2 id="a-solution-to-the-problem">A solution to the problem</h2>
-<p>Now that I’d found a problem related to strings, I wanted to fix it in a way that addressed what I thought were the two main issues - poor maintainability of many strings and also of course the heap memory problem itself. The solution I came up with leverages the compiler pre-processor and it goes as follows:</p>
-
-<ol>
-  <li>A string table is #defined to described all application strings and a corresponding unique enum value for each string defined. This satisfies the need to be able to maintain all strings in a single location</li>
-  <li>An array of strings leveraging <a href="https://www.arduino.cc/en/Reference/PROGMEM" target="_blank">PROGMEM</a> is #defined to ensure that all strings are stored in flash memory at compiled binary image -&gt; device image upload time. This solves the heap memory depletion problem.</li>
-  <li>A little helper function is introduced to make it easy to retrieve a string from flash using the corresponding unique enum value for a specific string.</li>
-</ol>
-
-<p>With this pattern in place, all that was left to do was to embark on a sizeable code refactoring exercise to swap all of my inline embedded string literals for calls to the new string helper function. About a week later and after a bunch of testing and bug squashing it was done and the nett result: about 6kB of heap memory was recovered and runtime heap usage was back somewhere around 26kB. Was it worth the effort? I’d say so yes.</p>
-
-<p>Of course this isn’t to be considered a silver bullet for all inline embedded strings in microcontroller code everywhere - in fact in areas of code where performance is an important factor, you’d want to make sure your strings are inline embedded so they are mapped directly into SRAM for speed; mapping strings from PROGMEM flash memory is a slow operation compared to direct RAM access. This is however a solution to inline string abuse and can be used where appropriate.</p>
-
-<p>Sample code that demonstrates this pattern is uploaded here along with a few further details included in the README.md: <a href="https://github.com/jjssoftware/applicationStrings">https://github.com/jjssoftware/applicationStrings</a></p>
+<ul>
+  <li>If you’re thinking about opening up access to your esp8266 device(s), encrypting traffic is <strong>highly recommended</strong></li>
+  <li>nginx does a great job of acting as a TLS/SSL reverse caching proxy for backend private devices</li>
+  <li>You can create your own widely accepted certificates with LetsEncrypt for the princely sum of no money!</li>
+  <li>The above configuration works for proxying regular HTTP/HTTPS traffic and also WS/WSS websocket traffic</li>
+  <li>The above nginx example configuration file is included as a <a href="https://github.com/Links2004/arduinoWebSockets/tree/master/examples/Nginx">sample</a> in the <a href="https://github.com/Links2004/arduinoWebSockets">links2004 arduinoWebsockets library</a> (my pull request :))</li>
+  <li>Let me know what you think in the comments</li>
+</ul>
 
             </article>
 
             <section class="share">
     <h3>Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;esp8266 String Optimization&quot;%20https://jjssoftware.github.io/string-optimization/%20via%20&#64;id8266_1&hashtags=esp8266,C/C++,arduino,"
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;Securing your esp8266&quot;%20https://jjssoftware.github.io/secure-your-esp8266/%20via%20&#64;id8266_1&hashtags=esp8266,arduino,tls,ssl,internet,web,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://jjssoftware.github.io/string-optimization/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://jjssoftware.github.io/secure-your-esp8266/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://jjssoftware.github.io/string-optimization/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://jjssoftware.github.io/secure-your-esp8266/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -200,7 +299,7 @@
         disqus_loaded = true;
         var disqus_shortname = 'jjssoftwaregithubio';
         var disqus_title = '';
-        var disqus_url = '/string-optimization/';
+        var disqus_url = '/secure-your-esp8266/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
