@@ -126,17 +126,17 @@
 
 <p>At the time of writing there is no native on board support for TLS/SSL certificates and given the hardware capabilities of current boards, I’d say this is just how it is and it’s unlikely to change. This means that if we want TLS protection for our esp device(s) we need to use some other external device as an up front security layer. In real terms this means the implementation of a TLS/SSL reverse proxy where the proxy device sits on the network and it has the ability to encrypt traffic and also act as a traffic relay for devices sat behind it that cannot do the job of TLS/SSL themselves.</p>
 
-<p>Note that although this post is about securing esp8266 devices, the techniques discussed can be equally applied to arduino devices with WiFi shields or indeed any computer or other device that needs securing via a TSL/SSL reverse proxy.</p>
+<p>Note that although this post is about securing esp8266 devices, the techniques discussed can be equally applied to arduino devices with WiFi shields or indeed any computer or other device that needs securing via a TLS/SSL reverse proxy.</p>
 
 <p><img src="/assets/img/reverse-proxy.png" alt="Reverse proxy" title="Reverse proxy" /></p>
 
 <h2 id="enter-nginx">Enter nginx</h2>
 
-<p>Without further ado I’ll introduce nginx as the server software that I use to act as a reverse proxy server. Nginx is a lightweight highly configurable web server that does a great job as a TSL/SSL reverse proxy see. In this article I’ll demonstrate a working nginx configuration file to enable TLS/SSL protection and in addition the proxy will also act as a HTTP caching server which means it can potentially massively improve performance of access to web pages. In the case of an esp8266 device behind the SSL reverse caching proxy, this means static content is served by nginx rather than off the esp8266 device itself.</p>
+<p>Without further ado I’ll introduce nginx as the server software that I use to act as a reverse proxy server. Nginx is a lightweight highly configurable web server that does a great job as a TLS/SSL reverse proxy server. In this article I’ll demonstrate a working nginx configuration file to enable TLS/SSL protection and in addition the proxy will also act as a HTTP caching server which means it can potentially hugely improve the performance of serving HTTP responses. In the case of an esp8266 device behind the SSL reverse caching proxy, this means static content can be served by nginx rather than by the esp8266 device itself.</p>
 
-<p>Obviously to use nginx, you need nginx installed or you need to install nginx. Personally I run nginx on my NAS device because that’s a device I have on the LAN that’s always on. My NAS device also runs a flavour of linux so nginx is well supported on this platform although I did need to use entware to get nginx cleanly installed because my NAS device doesn’t run a mainstream linux distro with a regular package management system.</p>
+<p>Obviously to use nginx, you’ll need nginx installed somewhere or you need to install nginx. Personally I run nginx on my NAS device because that’s a device I have on the LAN that’s always on. My NAS device also runs a flavour of linux so nginx is well supported on this platform. I did need to use entware to get nginx cleanly installed because my NAS device doesn’t run a mainstream linux distro with a regular package management system.</p>
 
-<p>So step 1 is to decide where you’re going to run nginx, be it a NAS device, a raspberry PI you’ve got lying around or a spare computer. If you need to get nginx installed the best place to start is probably here: <a href="https://www.nginx.com/resources/admin-guide/installing-nginx-plus/">https://www.nginx.com/resources/admin-guide/installing-nginx-plus/</a></p>
+<p>So step 1 is to decide where you’re going to run nginx, be it a NAS device, a raspberry PI you’ve got lying around or a spare computer. If you do need to get nginx installed, the best place to start is probably here: <a href="https://www.nginx.com/resources/admin-guide/installing-nginx-plus/">https://www.nginx.com/resources/admin-guide/installing-nginx-plus/</a></p>
 
 <hr />
 
@@ -234,7 +234,7 @@ server {
 
 <h2 id="the-config-explained">The config explained</h2>
 
-<p>I won’t go into an exhaustive discussion about everthing in this configuration but I will point out the interesting parts with reference to the official docs:</p>
+<p>I won’t go into an exhaustive discussion about everthing in this configuration but I will point out some of the interesting parts with reference to the official docs:</p>
 
 <ol>
   <li>Note that you can have multiple configuration files on nginx. Each file with a <strong>server</strong> section represents a separate hosted web service. Just make sure you separate correctly and get your ports right.</li>
