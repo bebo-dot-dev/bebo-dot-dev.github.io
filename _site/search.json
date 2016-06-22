@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "esp8266 Automated Project Versioning",
+      "category" : "firmware",
+      "tags"     : "esp8266, C/C++, and arduino",
+      "url"      : "/esp8266-automated-version-number-generation/",
+      "date"     : "18 Jun 2016"
+    } ,
+  
+    {
       "title"    : "Securing your esp8266",
       "category" : "webinternet",
       "tags"     : "esp8266, arduino, tls, ssl, internet, and web",
