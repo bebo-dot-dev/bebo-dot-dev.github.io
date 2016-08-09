@@ -5,13 +5,13 @@
     <description>jjssoftware.github.io blog</description>
     <link>https://jjssoftware.github.io/</link>
     <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Aug 2016 20:44:03 +0100</pubDate>
-    <lastBuildDate>Tue, 09 Aug 2016 20:44:03 +0100</lastBuildDate>
+    <pubDate>Tue, 09 Aug 2016 20:58:32 +0100</pubDate>
+    <lastBuildDate>Tue, 09 Aug 2016 20:58:32 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>esp8266 Configurable Power Management</title>
-        <description>&lt;h2 id=&quot;a-100-solar-application&quot;&gt;A 100% solar application&lt;/h2&gt; &lt;p&gt;Since the start of getting going with esp8266 boards in late 2015 I’ve had in the back of my mind the idea of how nice it would be to develop a little device that is free of all ties to a regular plug-in-the-wall power supply. With no plug in supply, we’re talking about battery power and if the goal of this project is complete independence then we’re talking rechargeable battery power. If this dream was a reality then the idea is that the device could go anywhere and be positioned anywhere, within the range WiFi.&lt;/p&gt;...</description>
+        <description>&lt;h2 id=&quot;a-100-solar-application&quot;&gt;A 100% solar application&lt;/h2&gt; &lt;p&gt;Since the start of getting going with esp8266 boards in late 2015 I’ve had in the back of my mind the idea of how nice it would be to develop a little device that is free of all ties to a regular plug-in-the-wall power supply. With no plug in supply, we’re talking about battery power and if the goal of this project is complete independence then we’re talking rechargeable battery power. If this dream was a reality then the idea is that the device could go anywhere and be positioned anywhere, within WiFi range.&lt;/p&gt; &lt;p&gt;I...</description>
         <pubDate>Tue, 19 Jul 2016 20:25:10 +0100</pubDate>
         <link>https://jjssoftware.github.io/esp8266-configurable-power-management/</link>
         <guid isPermaLink="true">https://jjssoftware.github.io/esp8266-configurable-power-management/</guid>
