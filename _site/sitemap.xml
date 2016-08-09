@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	  <url>
+		<loc>https://jjssoftware.github.io/esp8266-configurable-power-management/</loc>
+	  </url>
+	
+	  <url>
 		<loc>https://jjssoftware.github.io/esp8266-automated-version-number-generation/</loc>
 	  </url>
 	

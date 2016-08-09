@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "esp8266 Configurable Power Management",
+      "category" : "firmware",
+      "tags"     : "esp8266, C/C++, and arduino",
+      "url"      : "/esp8266-configurable-power-management/",
+      "date"     : "19 Jul 2016"
+    } ,
+  
+    {
       "title"    : "esp8266 Automated Project Versioning",
       "category" : "firmware",
       "tags"     : "esp8266, C/C++, and arduino",
