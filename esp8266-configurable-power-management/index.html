@@ -57,6 +57,7 @@
     <meta name="theme-color" content="#0562DC">
 
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/lightbox.min.css">
     <link rel="canonical" href="https://jjssoftware.github.io/esp8266-configurable-power-management/">
     <link rel="alternate" type="application/rss+xml" title="" href="https://jjssoftware.github.io/feed.xml" />
 </head>
@@ -142,13 +143,13 @@
 </ul>
 
 <h2 id="parts-in-pieces">Parts in pieces:</h2>
-<p><img src="/assets/img/solar-parts.jpg" alt="PSU parts disassembled" title="PSU parts disassembled" /></p>
+<p><a href="../assets/img/solar-parts.jpg" data-lightbox="image_set" data-title="PSU parts disassembled"><img src="../assets/img/solar-parts.jpg" alt="" class="" style="" /></a></p>
 
 <h2 id="parts-assembled">Parts assembled:</h2>
-<p><img src="/assets/img/solar-parts-assembled.jpg" alt="PSU parts assembled" title="PSU parts assembled" /></p>
+<p><a href="../assets/img/solar-parts-assembled.jpg" data-lightbox="image_set" data-title="PSU parts assembled"><img src="../assets/img/solar-parts-assembled.jpg" alt="" class="" style="" /></a></p>
 
 <h2 id="the-circuit">The circuit:</h2>
-<p><img src="/assets/img/solar-circuit.jpg" alt="The circuit" title="The circuit" /></p>
+<p><a href="../assets/img/solar-circuit.jpg" data-lightbox="image_set" data-title="The circuit"><img src="../assets/img/solar-circuit.jpg" alt="" class="" style="" /></a></p>
 
 <h2 id="the-good-options">The good (options)</h2>
 <p>The 18650 lithium battery charger I’ve called out above is a super cheap really flexible board. I’ve no clue how on earth anyone is making any money selling these at £0.28 a piece (price correct at 21/07/16) but as a buyer / tinkerer, at this price you can’t go wrong. As long as you have some method to supply 5v to the left side of this board and you have a rechargeable battery connected to the right side, you’re good to shove that output voltage through an LDO regulator to get to the 3.3v you need for an esp8266 board. So in this case we’re connecting a little solar panel onto the pins on the left side of this charger board for regular charging purposes, but there’s also a little micro USB connector on the 18650 board which means if you want, you can charge your battery using any old samsung phone charger you have lying around. For convenience I also decided to add a female DC jack socket to my prototype rig so the battery could also be charged using a 5v wall mains charger with a jack type socket.</p>
@@ -158,7 +159,7 @@
 
 <p>Undeterred the next day I charged the little battery to the max again and performed the same test with the solar panel in place and left the device running on a semi-sunny / mostly cloudy window ledge (aka British summer time) :</p>
 
-<p><img src="/assets/img/solar-on-charge.jpg" alt="Solar on charge" title="Solar on charge" /></p>
+<p><a href="../assets/img/solar-on-charge.jpg" data-lightbox="image_set" data-title="Solar on charge"><img src="../assets/img/solar-on-charge.jpg" alt="" class="" style="" /></a></p>
 
 <p>I left it running there, went to work and when I checked it later in the day it had ran out of juice again.</p>
 
@@ -183,7 +184,7 @@
 </ol>
 
 <h2 id="power-management-screenshots">Power management screenshots</h2>
-<p><img src="/assets/img/pwr_mgmt.png" alt="Power management screenshots" title="Power management screenshots" /></p>
+<p><a href="../assets/img/pwr_mgmt.png" data-lightbox="image_set" data-title="Power management screenshots"><img src="../assets/img/pwr_mgmt.png" alt="" class="" style="" /></a></p>
 
 <h2 id="so-that-works">So that works..</h2>
 <p>Ok let’s be realistic, it did work after a couple of days hacking, head scratching and debugging. So what’s next? I’m currently in the middle of design and build of a PCB version of this lithium charging ESP8266 breakout board swapping all the chunky prototype components for SMD components.</p>
@@ -250,6 +251,7 @@
     <p>Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <span class="love">❤</span> by <a href="http://willianjusten.com.br">Willian Justen</a></p>
 </footer>
 <script src="/assets/js/main.js"></script>
+<script src="/assets/js/lightbox-plus-jquery.min.js"></script>
         </section>
     </body>
 </html>
