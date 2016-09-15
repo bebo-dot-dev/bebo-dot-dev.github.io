@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "esp8266 Lithium Charging Breakout PCB",
+      "category" : "electronics",
+      "tags"     : "esp8266, pcb, battery, and solar",
+      "url"      : "/esp8266-lithium-charging-breakout-pcb/",
+      "date"     : "15 Sep 2016"
+    } ,
+  
+    {
       "title"    : "esp8266 Configurable Power Management",
       "category" : "firmware",
       "tags"     : "esp8266, C/C++, and arduino",
