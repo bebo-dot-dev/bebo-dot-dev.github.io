@@ -5,12 +5,12 @@
     <description>jjssoftware.github.io blog</description>
     <link>https://jjssoftware.github.io/</link>
     <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Sep 2016 20:36:13 +0100</pubDate>
-    <lastBuildDate>Thu, 15 Sep 2016 20:36:13 +0100</lastBuildDate>
+    <pubDate>Thu, 15 Sep 2016 20:51:28 +0100</pubDate>
+    <lastBuildDate>Thu, 15 Sep 2016 20:51:28 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>esp8266 Lithium Charging Breakout PCB</title>
+        <title>An esp8266 Lithium Charging Breakout PCB</title>
         <description>&lt;h2 id=&quot;shrink-that-prototype&quot;&gt;Shrink that prototype&lt;/h2&gt; &lt;p&gt;This is a follow on to my &lt;a href=&quot;/esp8266-configurable-power-management/&quot; target=&quot;_blank&quot;&gt;last post&lt;/a&gt; which was about building a prototyped lithium charging ESP8266 (ESP12) breakout board along with some power management firmware features. Having had reasonable success with the stripboard prototype, the next step was to create a PCB version of this project. PCBs are everywhere and although over time I’ve fiddled around with attempting to fix TVs and stereo systems with varying levels of success, I’ve never designed and created a PCB of my own so this was a completely new discipline to me.&lt;/p&gt; &lt;p&gt;I set myself the...</description>
         <pubDate>Thu, 15 Sep 2016 08:49:10 +0100</pubDate>
         <link>https://jjssoftware.github.io/esp8266-lithium-charging-breakout-pcb/</link>
