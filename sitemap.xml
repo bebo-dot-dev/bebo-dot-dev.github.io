@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	  <url>
+		<loc>https://jjssoftware.github.io/esp8266-password-complexify/</loc>
+	  </url>
+	
+	  <url>
 		<loc>https://jjssoftware.github.io/esp8266-lithium-charging-breakout-pcb/</loc>
 	  </url>
 	

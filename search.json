@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "More esp8266 security",
+      "category" : "security",
+      "tags"     : "esp8266, C/C++, JavaScript, security, and passwords",
+      "url"      : "/esp8266-password-complexify/",
+      "date"     : "11 Nov 2016"
+    } ,
+  
+    {
       "title"    : "An esp8266 Lithium Charging Breakout PCB",
       "category" : "electronics",
       "tags"     : "esp8266, pcb, battery, and solar",
@@ -26,8 +34,8 @@
   
     {
       "title"    : "Securing your esp8266",
-      "category" : "webinternet",
-      "tags"     : "esp8266, arduino, tls, ssl, internet, and web",
+      "category" : "webinternetsecurity",
+      "tags"     : "esp8266, arduino, tls, ssl, internet, web, and security",
       "url"      : "/secure-your-esp8266/",
       "date"     : "18 Jun 2016"
     } ,

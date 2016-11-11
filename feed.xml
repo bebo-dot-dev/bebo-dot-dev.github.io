@@ -5,9 +5,31 @@
     <description>jjssoftware.github.io blog</description>
     <link>https://jjssoftware.github.io/</link>
     <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Sep 2016 20:51:28 +0100</pubDate>
-    <lastBuildDate>Thu, 15 Sep 2016 20:51:28 +0100</lastBuildDate>
+    <pubDate>Fri, 11 Nov 2016 23:11:49 +0000</pubDate>
+    <lastBuildDate>Fri, 11 Nov 2016 23:11:49 +0000</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>More esp8266 security</title>
+        <description>&lt;h2 id=&quot;ermp55w0rd1&quot;&gt;..erm..P@55w0rd1!&lt;/h2&gt; &lt;p&gt;IOT device security is a hot topic at the moment. Many well known websites, services and companies are regularly coming under massive DDOS attacks and are being knocked offline. Recently these attacks are coming from &lt;a href=&quot;https://en.wikipedia.org/wiki/Mirai_(malware)&quot; target=&quot;_blank&quot;&gt;Mirai malware&lt;/a&gt; which targets IOT devices with weak default passwords and these IOT devices are being recruited into IOT powered botnets under the control of internet miscreants. Krebs came under attack, dyn came under attack and there was even discussion whether the &lt;a href=&quot;https://krebsonsecurity.com/2016/11/did-the-mirai-botnet-really-take-liberia-offline/&quot; target=&quot;_blank&quot;&gt;country of Liberia&lt;/a&gt; was being completely knocked offline by Mirai.&lt;/p&gt; &lt;p&gt;IOT device manufacturers are in the frame...</description>
+        <pubDate>Fri, 11 Nov 2016 07:55:43 +0000</pubDate>
+        <link>https://jjssoftware.github.io/esp8266-password-complexify/</link>
+        <guid isPermaLink="true">https://jjssoftware.github.io/esp8266-password-complexify/</guid>
+        
+        <category>esp8266</category>
+        
+        <category>C/C++</category>
+        
+        <category>JavaScript</category>
+        
+        <category>security</category>
+        
+        <category>passwords</category>
+        
+        
+        <category>security</category>
+        
+      </item>
     
       <item>
         <title>An esp8266 Lithium Charging Breakout PCB</title>
@@ -84,10 +106,14 @@
         
         <category>web</category>
         
+        <category>security</category>
+        
         
         <category>web</category>
         
         <category>internet</category>
+        
+        <category>security</category>
         
       </item>
     
