@@ -5,9 +5,31 @@
     <description>jjssoftware.github.io blog</description>
     <link>https://jjssoftware.github.io/</link>
     <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Nov 2016 23:36:20 +0000</pubDate>
-    <lastBuildDate>Fri, 11 Nov 2016 23:36:20 +0000</lastBuildDate>
+    <pubDate>Sat, 03 Dec 2016 20:38:55 +0000</pubDate>
+    <lastBuildDate>Sat, 03 Dec 2016 20:38:55 +0000</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>esp8266 two factor authentication</title>
+        <description>&lt;h2 id=&quot;adding-another-layer&quot;&gt;Adding another layer..&lt;/h2&gt; &lt;p&gt;In my &lt;a href=&quot;/esp8266-password-complexify/&quot; target=&quot;_blank&quot;&gt;previous article&lt;/a&gt; that talked about beefing up security on public internet facing IOT devices, I mentioned one of a number of potential improvements that I could introduce to my own stuff was two factor authentication. After a little thought I decided to have a go at implementing it.&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc6238&quot; target=&quot;_blank&quot;&gt;RFC6238&lt;/a&gt; / Google Authenticator support looked like a good fit for me because it’s a purely mathematical self contained algorithm based on HMAC and epoch time so it’s all done in software with no hardware dependencies. Add to that other people have...</description>
+        <pubDate>Sat, 03 Dec 2016 16:50:55 +0000</pubDate>
+        <link>https://jjssoftware.github.io/esp8266-rfc6238-totp/</link>
+        <guid isPermaLink="true">https://jjssoftware.github.io/esp8266-rfc6238-totp/</guid>
+        
+        <category>esp8266</category>
+        
+        <category>C/C++</category>
+        
+        <category>security</category>
+        
+        <category>passwords</category>
+        
+        <category>secondary authentication</category>
+        
+        
+        <category>security</category>
+        
+      </item>
     
       <item>
         <title>More esp8266 security</title>

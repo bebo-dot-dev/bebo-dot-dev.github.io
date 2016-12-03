@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "esp8266 two factor authentication",
+      "category" : "security",
+      "tags"     : "esp8266, C/C++, security, passwords, and secondary authentication",
+      "url"      : "/esp8266-rfc6238-totp/",
+      "date"     : "03 Dec 2016"
+    } ,
+  
+    {
       "title"    : "More esp8266 security",
       "category" : "security",
       "tags"     : "esp8266, C/C++, JavaScript, security, and passwords",
