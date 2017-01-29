@@ -5,13 +5,13 @@
     <description>jjssoftware.github.io blog</description>
     <link>https://jjssoftware.github.io/</link>
     <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Jan 2017 16:26:03 +0000</pubDate>
-    <lastBuildDate>Sun, 29 Jan 2017 16:26:03 +0000</lastBuildDate>
+    <pubDate>Sun, 29 Jan 2017 16:33:42 +0000</pubDate>
+    <lastBuildDate>Sun, 29 Jan 2017 16:33:42 +0000</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>esp8266, MQTT and node-RED</title>
-        <description>&lt;h2 id=&quot;another-worcester-bosch-boiler-hack&quot;&gt;Another Worcester-Bosch boiler hack&lt;/h2&gt; &lt;p&gt;I decided to automate my heating system after being inspired by &lt;a href=&quot;http://www.stevenhale.co.uk/main/2013/08/home-automation-reverse-engineering-a-worcester-bosch-dt10rf-wireless-thermostat/&quot; target=&quot;_blank&quot;&gt;Steven Hale’s phenomenal original work&lt;/a&gt;&lt;/p&gt; &lt;p&gt;This post is a whistle-stop tour in pictures and video of my take and build of Steve’s method of reverse engineering the 433MHz signals sent from my &lt;a href=&quot;https://www.worcester-bosch.co.uk/professional/support/documents/worcester-dt10rf-installation-instructions&quot; target=&quot;_blank&quot;&gt;DT10RF MK2&lt;/a&gt; thermostat to enable a node-RED system to be built around my home heating system for more flexible monitoring and control. Many thanks go to Steve for paving the way to make this build a reality.&lt;/p&gt; &lt;p&gt;&lt;strong style=&quot;display:block; text-align: center;&quot;&gt;SDR dongle &lt;a href=&quot;http://www.ebay.co.uk/itm/252674906658&quot; target=&quot;_blank&quot;&gt;(ebay listing here)&lt;/a&gt;:&lt;/strong&gt; &lt;a...</description>
+        <description>&lt;h2 id=&quot;another-worcester-bosch-boiler-hack&quot;&gt;Another Worcester-Bosch boiler hack&lt;/h2&gt; &lt;p&gt;I decided to automate my heating system after being inspired by &lt;a href=&quot;http://www.stevenhale.co.uk/main/2013/08/home-automation-reverse-engineering-a-worcester-bosch-dt10rf-wireless-thermostat/&quot; target=&quot;_blank&quot;&gt;Steven Hale’s phenomenal original work&lt;/a&gt;&lt;/p&gt; &lt;p&gt;This post is a whistle-stop tour in pictures and video of my take of Steve’s method of reverse engineering the 433MHz signals sent from my &lt;a href=&quot;https://www.worcester-bosch.co.uk/professional/support/documents/worcester-dt10rf-installation-instructions&quot; target=&quot;_blank&quot;&gt;DT10RF MK2&lt;/a&gt; thermostat, to enable a node-RED system to be built around my home heating system for more flexible monitoring and control. Many thanks go to Steve for paving the way to make this build a reality.&lt;/p&gt; &lt;p&gt;&lt;strong style=&quot;display:block; text-align: center;&quot;&gt;SDR dongle &lt;a href=&quot;http://www.ebay.co.uk/itm/252674906658&quot; target=&quot;_blank&quot;&gt;(ebay listing here)&lt;/a&gt;:&lt;/strong&gt; &lt;a href=&quot;../assets/img/sdr-dongle.jpg&quot; data-lightbox=&quot;image_set&quot;...</description>
         <pubDate>Sun, 29 Jan 2017 12:09:55 +0000</pubDate>
         <link>https://jjssoftware.github.io/esp8266-mqtt-node-red-boiler-hack/</link>
         <guid isPermaLink="true">https://jjssoftware.github.io/esp8266-mqtt-node-red-boiler-hack/</guid>
