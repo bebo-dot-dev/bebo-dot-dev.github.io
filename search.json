@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "esp8266, MQTT and node-RED",
+      "category" : "applications",
+      "tags"     : "esp8266, MQTT, node-RED, boiler, Worcester-Bosch, digistat, and DT10RF Mk2",
+      "url"      : "/esp8266-mqtt-node-red-boiler-hack/",
+      "date"     : "29 Jan 2017"
+    } ,
+  
+    {
       "title"    : "esp8266 two factor authentication",
       "category" : "security",
       "tags"     : "esp8266, C/C++, security, passwords, and secondary authentication",
