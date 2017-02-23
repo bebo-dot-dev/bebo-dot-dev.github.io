@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/esp8266-mqtt-node-red-boiler-hack/</loc>
+		<loc>http://localhost:4000/esp8266-mqtt-node-red-boiler-hack/</loc>
 	  </url>
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/esp8266-rfc6238-totp/</loc>
+		<loc>http://localhost:4000/esp8266-rfc6238-totp/</loc>
 	  </url>
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/esp8266-password-complexify/</loc>
+		<loc>http://localhost:4000/esp8266-password-complexify/</loc>
 	  </url>
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/esp8266-lithium-charging-breakout-pcb/</loc>
+		<loc>http://localhost:4000/esp8266-lithium-charging-breakout-pcb/</loc>
 	  </url>
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/esp8266-configurable-power-management/</loc>
+		<loc>http://localhost:4000/esp8266-configurable-power-management/</loc>
 	  </url>
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/esp8266-automated-version-number-generation/</loc>
+		<loc>http://localhost:4000/esp8266-automated-version-number-generation/</loc>
 	  </url>
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/secure-your-esp8266/</loc>
+		<loc>http://localhost:4000/secure-your-esp8266/</loc>
 	  </url>
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/string-optimization/</loc>
+		<loc>http://localhost:4000/string-optimization/</loc>
 	  </url>
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/dynamic-web-forms/</loc>
+		<loc>http://localhost:4000/dynamic-web-forms/</loc>
 	  </url>
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/id8266-aka-skynet/</loc>
+		<loc>http://localhost:4000/id8266-aka-skynet/</loc>
 	  </url>
 	
 	  <url>
-		<loc>https://jjssoftware.github.io/hello.jjssoftware.github.io/</loc>
+		<loc>http://localhost:4000/hello.jjssoftware.github.io/</loc>
 	  </url>
 	
 </urlset>
