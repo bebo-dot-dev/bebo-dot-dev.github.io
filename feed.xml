@@ -5,9 +5,29 @@
     <description>jjssoftware.github.io blog</description>
     <link>https://jjssoftware.github.io/</link>
     <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 27 Mar 2017 19:35:25 +0100</pubDate>
-    <lastBuildDate>Mon, 27 Mar 2017 19:35:25 +0100</lastBuildDate>
+    <pubDate>Wed, 14 Jun 2017 21:03:18 +0100</pubDate>
+    <lastBuildDate>Wed, 14 Jun 2017 21:03:18 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>an SBC board IPSEC router</title>
+        <description>&lt;h2 id=&quot;who-needs-a-vpn&quot;&gt;Who needs a VPN?&lt;/h2&gt; &lt;p&gt;It’s a giveaway from the title of this article that this is about a little VPN gateway / router device sat on the LAN so the answer is me, I need a VPN.&lt;/p&gt; &lt;p&gt;But to be serious for a moment the question as to whether anyone needs a VPN is a question worth asking. There’s much controversy and snake oil myth around the selling of commercial VPN services and a large proportion of this type of service selling is targetted at users who are keen on concealing questionable torrenting and streaming behaviour.&lt;/p&gt; &lt;p&gt;One area where...</description>
+        <pubDate>Wed, 14 Jun 2017 09:22:55 +0100</pubDate>
+        <link>https://jjssoftware.github.io/neo2-vpn-gateway/</link>
+        <guid isPermaLink="true">https://jjssoftware.github.io/neo2-vpn-gateway/</guid>
+        
+        <category>VPN</category>
+        
+        <category>security</category>
+        
+        <category>internet</category>
+        
+        <category>web</category>
+        
+        
+        <category>applications</category>
+        
+      </item>
     
       <item>
         <title>esp8266, MQTT and node-RED</title>
@@ -202,24 +222,6 @@
         <category>web</category>
         
         <category>internet</category>
-        
-      </item>
-    
-      <item>
-        <title>iD8266 (aka SkyNet)</title>
-        <description>&lt;h2 id=&quot;esp8266-web-based-firmware&quot;&gt;esp8266 web based firmware&lt;/h2&gt; &lt;p&gt;I’ve been working on a project to create custom web based firmware for the esp8266 for about the last six months. If you landed here and you don’t know what an &lt;a href=&quot;http://www.esp8266.com/&quot; target=&quot;_blank&quot;&gt;esp8266&lt;/a&gt; is, it’s a tiny WiFi enabled microprocessor board in various models with varying features depending on which model you go for. There’s a large community around these devices with hobbyists / DIY electronics people and if you’re an avr / arduino tinkerer you’ll feel right at home playing around with esp8266 boards.&lt;/p&gt; &lt;p&gt;By and large these devices are made by a...</description>
-        <pubDate>Sun, 12 Jun 2016 08:42:54 +0100</pubDate>
-        <link>https://jjssoftware.github.io/id8266-aka-skynet/</link>
-        <guid isPermaLink="true">https://jjssoftware.github.io/id8266-aka-skynet/</guid>
-        
-        <category>iD8266</category>
-        
-        <category>esp8266</category>
-        
-        <category>youtube</category>
-        
-        
-        <category>videos</category>
         
       </item>
     

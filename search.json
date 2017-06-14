@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "an SBC board IPSEC router",
+      "category" : "applications",
+      "tags"     : "VPN, security, internet, and web",
+      "url"      : "/neo2-vpn-gateway/",
+      "date"     : "14 Jun 2017"
+    } ,
+  
+    {
       "title"    : "esp8266, MQTT and node-RED",
       "category" : "applications",
       "tags"     : "esp8266, MQTT, node-RED, boiler, Worcester-Bosch, digistat, and DT10RF Mk2",
