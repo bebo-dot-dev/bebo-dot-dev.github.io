@@ -1,7 +1,7 @@
 [
   
     {
-      "title"    : "an SBC board IPSEC router",
+      "title"    : "an SBC IPSEC router",
       "category" : "applications",
       "tags"     : "VPN, security, internet, and web",
       "url"      : "/neo2-vpn-gateway/",

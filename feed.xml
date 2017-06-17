@@ -5,12 +5,12 @@
     <description>jjssoftware.github.io blog</description>
     <link>https://jjssoftware.github.io/</link>
     <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Jun 2017 08:36:31 +0100</pubDate>
-    <lastBuildDate>Fri, 16 Jun 2017 08:36:31 +0100</lastBuildDate>
+    <pubDate>Sat, 17 Jun 2017 13:19:25 +0100</pubDate>
+    <lastBuildDate>Sat, 17 Jun 2017 13:19:25 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
-        <title>an SBC board IPSEC router</title>
+        <title>an SBC IPSEC router</title>
         <description>&lt;h2 id=&quot;who-needs-a-vpn&quot;&gt;Who needs a VPN?&lt;/h2&gt; &lt;p&gt;It’s a giveaway from the title of this article that this is about a little VPN gateway / router device sat on the LAN so the answer is me, I need a VPN.&lt;/p&gt; &lt;p&gt;But to be serious for a moment the question as to whether anyone needs a VPN is a question worth asking. There’s much controversy and snake oil myth around the selling of commercial VPN services and a large proportion of this type of service selling is targetted at users who are keen on concealing questionable torrenting and streaming behaviour.&lt;/p&gt; &lt;p&gt;One area where...</description>
         <pubDate>Wed, 14 Jun 2017 09:22:55 +0100</pubDate>
         <link>https://jjssoftware.github.io/neo2-vpn-gateway/</link>
