@@ -5,9 +5,9 @@
     <description>jjssoftware.github.io blog</description>
     <link>https://jjssoftware.github.io/</link>
     <atom:link href="https://jjssoftware.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Jun 2017 21:43:31 +0100</pubDate>
-    <lastBuildDate>Sat, 17 Jun 2017 21:43:31 +0100</lastBuildDate>
-    <generator>Jekyll v3.4.0</generator>
+    <pubDate>Sun, 09 May 2021 21:40:25 +0100</pubDate>
+    <lastBuildDate>Sun, 09 May 2021 21:40:25 +0100</lastBuildDate>
+    <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>an SBC IPSEC router</title>
